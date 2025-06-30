@@ -1,12 +1,12 @@
 from datasets import load_dataset, load_from_disk
 
 # 从huggingface下载数据集到本地
-# dataset = load_dataset(
-#     path="lansinuote/ChnSentiCorp",
-#     # split=["train", "test", "validation"],
-#     # cache_dir="D:/A_Code/datasets"
-# )
-# dataset.save_to_disk("D:/A_Code/datasets")
+dataset = load_dataset(
+    path="trl-lib/ultrafeedback_binarized",
+    # split=["train", "test", "validation"],
+    # cache_dir="D:/A_Code/datasets"
+)
+dataset.save_to_disk("D:/A_Code/datasets")
 # print(dataset)
 
 

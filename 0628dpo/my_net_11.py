@@ -3,12 +3,12 @@ import torch
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-pretrained_model_name = "D:/A_Code/model/google-bert/bert-base-chinese/models--google-bert--bert-base-chinese/snapshots/c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f"
-# 0.1B用了2G显存
+pretrained_model_name = "D:/A_Code/model/Qwen/Qwen2-0.5B-Instruct/models--Qwen--Qwen2-0.5B-Instruct/snapshots/c540970f9e29518b1d8f06ab8b24cba66ad77b6d"
+
 pretrained_model = BertModel.from_pretrained(pretrained_model_name).to(DEVICE)
 
 # print(pretrained_model)
-print(pretrained_model.embeddings.word_embeddings)
+# print(pretrained_model.embeddings.word_embeddings)
 
 class Model(torch.nn.Module):
     def __init__(self):
